@@ -1,5 +1,7 @@
 # LuckyAPI
 
+![Screenshot from 2024-02-29 19-35-25](https://github.com/ytsykvas/LuckyAPI/assets/102487287/45b52854-4348-44da-97ca-cb3170f55414)
+
 ### Description
 Created an API with React as a frontend part with requirements in a letter. I also decided to present the second part of the task on a template.
 
@@ -26,21 +28,25 @@ Start the server:
 ```
 rails server
 ```
+```
 yarn dev
 ```
 
 Make sure you have Node and npm.
 
-Your RoR app will be available at http://localhost:3000
+Your RoR app will be available at http://localhost:3000. 
 Your Vite+React app will be available at http://localhost:5173/
 
 ## Testing
 
-Rpec + Cucumber
+Rpec for form objects in RoR app.
+Cucumber for React templates.
+
 
 ### Run for testing:
 ``` 
 bundle exec rspec
+```
 ```
 bundle exec cucumber
 ```
