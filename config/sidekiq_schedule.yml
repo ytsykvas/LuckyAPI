@@ -1,0 +1,6 @@
+currency_exchanger_service:
+  cron: "0 12 * * *"
+  class: "CurrencyExchangerService"
+  queue: default
+  args: []
+  description: "Run CurrencyExchangerService.perform_rate daily at 12:00"

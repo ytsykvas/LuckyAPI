@@ -1,0 +1,28 @@
+.table-container {
+  margin-top: 20px;
+}
+
+.currency-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.currency-table th,
+.currency-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.currency-table th {
+  background-color: #f2f2f2;
+}
+
+.currency-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.currency-table tbody tr:hover {
+  background-color: #ddd;
+}

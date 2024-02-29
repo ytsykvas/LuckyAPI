@@ -1,0 +1,32 @@
+.input-select-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input-select-wrapper select,
+.input-select-wrapper input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.input-select-wrapper select {
+  width: 100px;
+  
+}
+
+.input-select-wrapper input[type="number"] {
+  flex: 1;
+}
+
+.result-element {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #afaeae;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
