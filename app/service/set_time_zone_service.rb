@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SetTimeZoneService
   def initialize(params)
     @params = params
@@ -9,11 +11,11 @@ class SetTimeZoneService
     if cities.present?
       cities.each do |city|
         time_zone = ActiveSupport::TimeZone[city.strip]
-        if time_zone.present?
-          time_info[city.strip.to_sym] = Time.now.in_time_zone(time_zone).to_time
-        else
-          time_info[city.strip.to_sym] = 'Invalid Timezone'
-        end
+        time_info[city.strip.to_sym] = if time_zone.present?
+                                         Time.now.in_time_zone(time_zone).to_time
+                                       else
+                                         'Invalid Timezone'
+                                       end
       end
     end
     time_info

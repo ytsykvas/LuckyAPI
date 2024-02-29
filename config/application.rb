@@ -1,6 +1,8 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
+require_relative 'boot'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -11,14 +13,12 @@ module LuckyTest
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
-    if config.active_record.sqlite3
-      config.active_record.sqlite3.represent_boolean_as_integer = true
-    end
+    config.active_record.sqlite3.represent_boolean_as_integer = true if config.active_record.sqlite3
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
-    config.autoload_lib(ignore: %w(assets tasks))
+    config.autoload_lib(ignore: %w[assets tasks])
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -36,7 +36,7 @@ module LuckyTest
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins 'localhost:5173'
-        resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head], credentials: true
+        resource '*', headers: :any, methods: %i[get post put patch delete options head], credentials: true
       end
     end
   end

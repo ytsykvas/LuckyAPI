@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 When(/I visit our page/) do
   visit 'http://localhost:5173/'
 end
 
 When(/I check (.*?) checkbox/) do |city|
-  find('input[type="checkbox"][value="' + city + '"]').check
+  find("input[type=\"checkbox\"][value=\"#{city}\"]").check
 end
 
 When(/I click the "(.*?)" button/) do |button_name|

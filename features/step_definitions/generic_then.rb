@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 Then(/^I see text: (.+)/) do |text|
   expect(page).to have_text(text)
 end
 
 Then(/^I see symbols "([^"]*)" in the currency table$/) do |symbols|
-  expected_symbols = symbols.split(",")
-  actual_symbols = all(".currency-table tbody td:first-child").map(&:text)
+  expected_symbols = symbols.split(',')
+  actual_symbols = all('.currency-table tbody td:first-child').map(&:text)
 
   expected_symbols.each do |symbol|
     expect(actual_symbols).to include(symbol)
