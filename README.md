@@ -1,24 +1,46 @@
-# README
+# LuckyAPI
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Description
+Created an API with React as a frontend part with requirements in a letter. I also decided to present the second part of the task on a template.
 
-Things you may want to cover:
+Not gitignore some data that would be sensitive on a real project, but for ease of testing the project I left it public.
+For example, the API key to find out currency rates is not hidden, so that the reviewer does not need to create his own key.
 
-* Ruby version
+I implemented the coverage of the application with tests. I covered the templates with cucumber tests.
+The functional part is covered by Rspec tests.
 
-* System dependencies
+[Full text of current task](https://drive.google.com/file/d/1_dnemjYG7A0wgVmVDthFR5v-2wzo2M4i/view?usp=drive_link)
 
-* Configuration
+### Prerequisites
+Ruby 3.2.2,  Rails 7.1.3, Node v18.16.1, npm 9.5.1, yarn 1.22.21, Rspec + Cucumber for test coverage, Puma 5.0, Postman app for manual testing of requests.
+### Installation
+Clone the repository:
+```
+git clone git@github.com:ytsykvas/LuckyAPI.git
+```
+Install dependencies:
+```
+bundle install
+```
+Start the server:
+```
+rails server
+```
+yarn dev
+```
 
-* Database creation
+Make sure you have Node and npm.
 
-* Database initialization
+Your RoR app will be available at http://localhost:3000
+Your Vite+React app will be available at http://localhost:5173/
 
-* How to run the test suite
+## Testing
 
-* Services (job queues, cache servers, search engines, etc.)
+Rpec + Cucumber
 
-* Deployment instructions
-
-* ...
+### Run for testing:
+``` 
+bundle exec rspec
+```
+bundle exec cucumber
+```
