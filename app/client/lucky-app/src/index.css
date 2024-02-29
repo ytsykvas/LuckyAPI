@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&family=Titillium+Web&display=swap');
-@import url('./styles/Selector.css');
 @import url('./styles/Button.css');
 @import url('./styles/Exchange.css');
 @import url('./styles/Header.css');
@@ -60,7 +59,7 @@ p {
 .content-container nav {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Вирівнювання елементів по центру по горизонталі */
+  align-items: center;
 }
 
 .result-element,
@@ -83,7 +82,7 @@ p {
 }
 
 .logo {
-  width: 35px; /* Встановлюємо ширину зображення */
-  height: auto; /* Автоматична висота, щоб зберегти пропорції */
-  margin-right: auto; /* Вирівнюємо логотип у лівому куті, залишаючи інші елементи справа */
+  width: 35px;
+  height: auto;
+  margin-right: auto;
 }
