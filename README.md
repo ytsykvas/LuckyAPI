@@ -19,10 +19,12 @@ I covered both tasks with tests. Cucumber tests make us press buttons and other 
 
 ### 1) Display current time for selected cities
 
+We can set the checkboxes on the cities whose time we want to know and get the time and the current UTC time.
 We take parameters with a list of required cities, process them using the built-in Time class. The controller returns JSON with the necessary information, after which we process the JSON to display on the page for the user. By default, this task was for the backend, but I decided to display it on the page for clarity.
 
 ### 2) SPA for currency conversion
 
+We have exchange rates received from the API in relation to UAH. We can calculate the exchange rate of another currency for hryvnia without reloading the page and without making a request to the server.
 Implemented an API call daily at 12:00 on the CRON schedule using Sidekiq to find out the exchange rate of 5 currencies. In order to avoid using a database, which will be slower than simply accessing a hash with several keys, I write the result of the request to a JS file (metaprogramming). And I display the result of the call to the API and the result of calculating the received data on the React component.
 
 ### Prerequisites
