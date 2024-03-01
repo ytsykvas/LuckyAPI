@@ -13,6 +13,18 @@ The functional part is covered by Rspec tests.
 
 [Full text of current task](https://drive.google.com/file/d/1_dnemjYG7A0wgVmVDthFR5v-2wzo2M4i/view?usp=drive_link)
 
+## Realization
+
+I covered both tasks with tests. Cucumber tests make us press buttons and other elements, checking the functionality. Rspec tests check the functionality of Ruby classes.
+
+### 1) Display current time for selected cities
+
+We take parameters with a list of required cities, process them using the built-in Time class. The controller returns JSON with the necessary information, after which we process the JSON to display on the page for the user. By default, this task was for the backend, but I decided to display it on the page for clarity.
+
+### 2) SPA for currency conversion
+
+Implemented an API call daily at 12:00 on the CRON schedule using Sidekiq to find out the exchange rate of 5 currencies. In order to avoid using a database, which will be slower than simply accessing a hash with several keys, I write the result of the request to a JS file (metaprogramming). And I display the result of the call to the API and the result of calculating the received data on the React component.
+
 ### Prerequisites
 Ruby 3.2.2,  Rails 7.1.3, Node v18.16.1, npm 9.5.1, yarn 1.22.21, Rspec + Cucumber for test coverage, Puma 5.0, Postman app for manual testing of requests.
 ### Installation
